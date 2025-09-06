@@ -96,6 +96,18 @@
 {% for title, items in skills.items() %}
 <p><strong>{{ title }}:</strong> {{ items | join(", ") }}</p>
 {% endfor %}
+
+<h2>{{ i8n.misc }}</h2>
+{% for misc in misc %}
+<div class="row">
+    <div class="left">
+        <strong>{{ misc.type }}.</strong>
+        {{ misc.details }}
+    </div>
+    <div class="right">{{misc.year}}</div>
+</div>
+{% endfor %}
+
 </body>
 </html>
 

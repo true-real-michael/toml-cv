@@ -1,0 +1,76 @@
+[personal]
+name = "Name Surname"
+email = "email@example.com"
+github = "username"
+linkedin = "name-surname-0a0a0a0a"
+phone = "+12345678910"
+address = "Address"
+date_of_birth = "01.01.1970"
+
+[i8n]
+work_experience = "Experience"
+education = "Education"
+projects = "Projects"
+skills = "Skills"
+technologies = "Technologies"
+misc = "Misc"
+
+[[education]]
+start = 2025-09-01
+end = "Present"
+institution = "University 2"
+location = "City, Country"
+degree = "M.Sc. in Hookah-development"
+
+[[education]]
+start = 2021-09-01
+end = 2025-07-09
+institution = "University 1"
+location = "City, Country"
+degree = "B.Sc. in Hookah-development"
+
+[[experience]]
+start = 2024-07-30
+end = 2025-08-12
+title = "Title"
+company = "Company"
+location = "City, Country"
+details = [
+    "Sleeped at work",
+    "Vibe coded.",
+]
+technologies = ["Coffee Machine", "Free food at the office"]
+
+[[experience]]
+start = 2023-07-01
+end = 2023-10-01
+title = "Title"
+company = "Company"
+location = "City, Country"
+details = [
+    "Took advantage of flexible work hours.",
+]
+technologies = ["idk"]
+
+
+[[project]]
+start = 2024-09-01
+end = 2025-05-31
+title = "Title"
+location = "Universiy 1"
+subtitle = "Bachelor's Thesis"
+details = [
+	"Completed the text within 2h of the deadline",
+]
+technologies = [ "aaa", "bbb" ]
+
+[skills]
+Languages = ["C++", "C--"]
+Databases = ["SQLite", "SQHeavy"]
+Technologies = [ "Docker", "Git" ]
+"Soft Skills" = ["Vibes idk", "✨"]
+
+[[misc]]
+year = 2024
+type = "Type"
+details = "Details."
