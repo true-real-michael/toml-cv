@@ -1,35 +1,40 @@
 body {
-  font-family: "Helvetica Neue", Arial, sans-serif;
-  margin: 2cm;
-  color: #222;
+    font-family: "Helvetica Neue", Arial, sans-serif;
+    margin: 2cm;
+    color: #222;
 }
 
 .entry {
-  display: flex;
-  justify-content: space-between;
-  margin-bottom: 1rem;
+    margin-bottom: 1rem;
+}
+
+.row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 0.2rem;
 }
 
 .left {
-  flex: 1;
+    /*flex: 1;*/
 }
 
 .right {
-  text-align: right;
-  flex: 1;
+    text-align: right;
+    /*flex: 0;*/
 }
 
 h1 {
-  font-size: 28px;
-  border-bottom: 2px solid #000;
+    font-size: 28px;
+    /*border-bottom: 2px solid #000;*/
 }
 
 h2 {
-  margin-top: 1.5em;
-  font-size: 20px;
+    margin-top: 1.5em;
+    font-size: 20px;
+    border-bottom: 1px solid #555;
 }
 
 h3 {
-  margin-top: 1em;
-  font-size: 16px;
+    margin-top: 1em;
+    font-size: 16px;
 }

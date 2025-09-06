@@ -23,39 +23,76 @@
 <h2>Experience</h2>
 {% for job in experience %}
 <div class="entry">
-    <div class="left">
-        <div><strong>{{ job.title }}</strong></div>
-        <div>{{ job.company }}</div>
+    <div class="row">
+        <div class="left">
+            <div><strong>{{ job.title }}</strong></div>
+        </div>
+        <div class="right">
+            <div><em>{{ job.start }} – {{ job.end }}</em></div>
+        </div>
     </div>
-    <div class="right">
-        <div><em>{{ job.start }} – {{ job.end }}</em></div>
-        <div>{{ job.location }}</div>
+    <div class="row">
+        <div class="left">
+            <div>{{ job.company }}</div>
+        </div>
+        <div class="right">
+            <div>{{ job.location }}</div>
+        </div>
     </div>
+    <ul style="margin-top: 0px; margin-bottom: 0px;">
+        {% for d in job.details %}
+        <li>{{ d }}</li>
+        {% endfor %}
+    </ul>
 </div>
-<ul>
-    {% for d in job.details %}
-    <li>{{ d }}</li>
-    {% endfor %}
-</ul>
 {% endfor %}
 
 <h2>Education</h2>
 {% for edu in education %}
 <div class="entry">
-    <div class="left">
-        <div><strong>{{ edu.degree }}</strong></div>
-        <div>{{ edu.institution }}</div>
+    <div class="row">
+        <div class="left">
+            <div><strong>{{ edu.degree }}</strong></div>
+            <div>{{ edu.institution }}</div>
+        </div>
+        <div class="right">
+            <div><em>{{ edu.start }} – {{ edu.end }}</em></div>
+            <div>{{ edu.location }}</div>
+        </div>
     </div>
-    <div class="right">
-        <div><em>{{ edu.start }} – {{ edu.end }}</em></div>
-        <div>{{ edu.location }}</div>
+</div>
+{% endfor %}
+
+<h2>Projects</h2>
+{% for proj in project %}
+<div class="entry">
+    <div class="row">
+        <div class="left">
+            <div><strong>{{ proj.title }}</strong></div>
+        </div>
+        <div class="right">
+            <div><em>{{ proj.start }} – {{ proj.end }}</em></div>
+        </div>
     </div>
+    <div class="row">
+        <div class="left">
+            <div>{{ proj.subtitle }}</div>
+        </div>
+        <div class="right">
+            <div>{{ proj.location }}</div>
+        </div>
+    </div>
+    <ul>
+        {% for d in proj.details %}
+        <li>{{ d }}</li>
+        {% endfor %}
+    </ul>
 </div>
 {% endfor %}
 
 <h2>Skills</h2>
 {% for title, items in skills.items() %}
-<p><strong>{{ title }}</strong> {{ items | join(", ") }}</p>
+<p><strong>{{ title }}:</strong> {{ items | join(", ") }}</p>
 {% endfor %}
 </body>
 </html>
