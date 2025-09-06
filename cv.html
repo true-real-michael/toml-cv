@@ -3,6 +3,7 @@
 <head>
     <meta charset="utf-8">
     <link rel="stylesheet" href="style.css">
+    <title>CV</title>
 </head>
 <body>
 <h1>{{ personal.name }}</h1>
@@ -38,7 +39,7 @@
   </div>
 </div>
 
-<h2>Experience</h2>
+<h2>{{ i8n.work_experience }}</h2>
 {% for job in experience %}
 <div class="entry">
     <div class="row">
@@ -49,16 +50,16 @@
         <h4 class="left">{{ job.company }}</h4>
         <div class="right">{{ job.location }}</div>
     </div>
-    <ul style="margin-top: 0px; margin-bottom: 0px;">
+    <ul style="margin-top: 0; margin-bottom: 0;">
         {% for d in job.details %}
         <li>{{ d }}</li>
         {% endfor %}
-        <li><strong>Technologies:</strong> {{ job.technologies | join(', ') }}</li>
+        <li><strong>{{ i8n.technologies }}:</strong> {{ job.technologies | join(', ') }}</li>
     </ul>
 </div>
 {% endfor %}
 
-<h2>Education</h2>
+<h2>{{ i8n.education }}</h2>
 {% for edu in education %}
 <div class="entry">
     <div class="row">
@@ -72,7 +73,7 @@
 </div>
 {% endfor %}
 
-<h2>Projects</h2>
+<h2>{{ i8n.projects }}</h2>
 {% for proj in project %}
 <div class="entry">
     <div class="row">
@@ -91,7 +92,7 @@
 </div>
 {% endfor %}
 
-<h2>Skills</h2>
+<h2>{{ i8n.skills }}</h2>
 {% for title, items in skills.items() %}
 <p><strong>{{ title }}:</strong> {{ items | join(", ") }}</p>
 {% endfor %}
