@@ -11,8 +11,13 @@
     <a href="mailto:{{ personal.email }}">{{ personal.email }}</a>
 
     <img src="icons/github.svg" alt="GitHub" width="18" height="18"/>
-    <a href="https://github.com/{{ personal.github }}" target="_blank">github.com/{{ personal.github }}</a>
+    <a href="https://github.com/{{ personal.github }}" target="_blank">{{ personal.github }}</a>
 
+    <img src="icons/linkedin.svg" alt="LinkedIn" width="18" height="18"/>
+    <a href="https://linkedin.com/in/{{ personal.linkedin }}" target="_blank">linkedin</a>
+
+    <img src="icons/phone.svg" alt="Phone" width="18" height="18"/>
+    <a href="tel:{{ personal.phone }}">{{ personal.phone }}</a>
 </div>
 
 <h2>Experience</h2>
@@ -27,7 +32,6 @@
         <div>{{ job.location }}</div>
     </div>
 </div>
-
 <ul>
     {% for d in job.details %}
     <li>{{ d }}</li>
