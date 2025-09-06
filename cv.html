@@ -24,20 +24,12 @@
 {% for job in experience %}
 <div class="entry">
     <div class="row">
-        <h3 class="left">
-            {{ job.title }}
-        </h3>
-        <div class="right">
-            <div>{{ job.start }} – {{ job.end }}</div>
-        </div>
+        <h3 class="left">{{ job.title }}</h3>
+        <div class="right">{{ job.start }} – {{ job.end }}</div>
     </div>
     <div class="row">
-        <h4 class="left">
-            <div>{{ job.company }}</div>
-        </h4>
-        <div class="right">
-            <div>{{ job.location }}</div>
-        </div>
+        <h4 class="left">{{ job.company }}</h4>
+        <div class="right">{{ job.location }}</div>
     </div>
     <ul style="margin-top: 0px; margin-bottom: 0px;">
         {% for d in job.details %}
@@ -52,14 +44,12 @@
 {% for edu in education %}
 <div class="entry">
     <div class="row">
-        <div class="left">
-            <div><strong>{{ edu.degree }}</strong></div>
-            <div>{{ edu.institution }}</div>
-        </div>
-        <div class="right">
-            <div><em>{{ edu.start }} – {{ edu.end }}</em></div>
-            <div>{{ edu.location }}</div>
-        </div>
+        <h3 class="left">{{ edu.degree }}</h3>
+        <div class="right">{{ edu.start }} – {{ edu.end }}</div>
+    </div>
+    <div class="row">
+        <h4 class="left">{{ edu.institution }}</h4>
+        <div class="right">{{ edu.location }}</div>
     </div>
 </div>
 {% endfor %}
@@ -68,20 +58,12 @@
 {% for proj in project %}
 <div class="entry">
     <div class="row">
-        <div class="left">
-            <div><strong>{{ proj.title }}</strong></div>
-        </div>
-        <div class="right">
-            <div><em>{{ proj.start }} – {{ proj.end }}</em></div>
-        </div>
+        <h3 class="left">{{ proj.title }}</h3>
+        <div class="right">{{ proj.start }} – {{ proj.end }}</div>
     </div>
     <div class="row">
-        <div class="left">
-            <div>{{ proj.subtitle }}</div>
-        </div>
-        <div class="right">
-            <div>{{ proj.location }}</div>
-        </div>
+        <h4 class="left">{{ proj.subtitle }}</h4>
+        <div class="right">{{ proj.location }}</div>
     </div>
     <ul>
         {% for d in proj.details %}
