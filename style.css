@@ -15,11 +15,14 @@ body {
 }
 
 .left {
+    padding-right: 1rem;
     /*flex: 1;*/
 }
 
 .right {
     text-align: right;
+    white-space: nowrap;
+    flex-shrink: 0;
     /*flex: 0;*/
 }
 
