@@ -1,6 +1,6 @@
 body {
-    font-family: "Helvetica Neue", Arial, sans-serif;
-    margin: 2cm;
+    font-family: "Roboto Light", "Helvetica Neue", Arial, sans-serif;
+    margin: 0.7cm;
     color: #222;
 }
 
@@ -22,20 +22,54 @@ body {
     text-align: right;
     white-space: nowrap;
     flex-shrink: 0;
+    font-size: 15px;
+    font-style: italic;
 }
 
 h1 {
     font-size: 28px;
-    border-bottom: 2px solid #000;
+    margin-top: 0.3rem;
+    margin-bottom: 0.3rem;
 }
 
 h2 {
-    margin-top: 1.5em;
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
     font-size: 20px;
     border-bottom: 1px solid #555;
 }
 
 h3 {
-    margin-top: 1em;
+    margin: 0;
     font-size: 16px;
 }
+
+h4 {
+    margin: 0;
+    font-size: 15px;
+    font-weight: normal;
+}
+
+p, ul {
+    margin: 0.2rem;
+    font-size: 15px;
+}
+
+ul {
+    padding-left: 20px;
+}
+
+li {
+    margin: 0.05rem
+}
+
+/*@media print {*/
+/*  @page {*/
+/*    margin: 10mm; !* or 0.5in, 1cm, etc. *!*/
+/*  }*/
+
+/*  body {*/
+/*    margin: 10mm; !* remove default body margin *!*/
+/*  }*/
+/*}*/
+
